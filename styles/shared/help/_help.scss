@@ -1,0 +1,28 @@
+.help-customer {
+  ul {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    row-gap: 10px;
+    width: 100%;
+
+    li {
+      text-transform: lowercase;
+      width: 100%;
+      white-space: nowrap;
+      font-size: 16px;
+      text-align: center;
+
+      @include media-breakpoint-up('lg') {
+        font-size: 18px;
+      }
+    }
+
+    @include media-breakpoint-up('lg') {
+      align-items: center;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+  }
+}

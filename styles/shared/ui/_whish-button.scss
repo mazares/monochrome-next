@@ -1,0 +1,29 @@
+.whish-button {
+  background-color: $transparent;
+  border: 1px solid $brand-tertiary;
+  padding: 0 12px 0 0;
+  height: auto;
+  width: auto;
+  color: $brand-primary;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $brand-tertiary;
+    color: $brand-primary;
+  }
+
+  i {
+    padding: 12px 6px;
+    margin-right: 13px;
+    height: 100%;
+    font-size: 18px;
+    color: $brand-primary;
+    background-color: $brand-tertiary;
+
+    @include media-breakpoint-up('md') {
+      padding: 14px 14px;
+    }
+  }
+}

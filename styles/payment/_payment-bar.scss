@@ -1,0 +1,70 @@
+.payment-bar {
+  &-progress {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    align-items: center;
+    justify-items: center;
+    padding: 16px 0;
+    position: relative;
+    border-top: 1px solid $brand-tertiary;
+
+    li {
+      font-size: 14px;
+      width: 100%;
+      white-space: nowrap;
+      text-transform: lowercase;
+
+      @include media-breakpoint-up('lg') {
+        font-size: 22px;
+      }
+
+      a {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        row-gap: 10px;
+      }
+
+      li {
+        content: '';
+        width: 25%;
+        height: 1px;
+        background-color: $brand-tertiary;
+        position: absolute;
+        bottom: 21px;
+        z-index: -1;
+      }
+
+      .active::after {
+        content: '';
+        height: 10px;
+        width: 10px;
+        background-color: $brand-primary;
+        border-radius: 50%;
+        text-align: center;
+      }
+
+      a::before {
+        content: '';
+        width: 25%;
+        height: 1px;
+        background-color: $brand-tertiary;
+        position: absolute;
+        bottom: 21px;
+        z-index: -1;
+      }
+
+      a::after {
+        content: '';
+        height: 10px;
+        width: 10px;
+        border: 1px solid $brand-tertiary;
+        background-color: $brand-tertiary;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 1;
+      }
+    }
+  }
+}

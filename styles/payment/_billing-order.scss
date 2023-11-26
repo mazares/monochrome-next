@@ -1,0 +1,208 @@
+.billing-order {
+  display: grid;
+  grid-row-gap: 24px;
+  row-gap: 24px;
+  align-items: center;
+
+  &-header {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 32px;
+      color: $brand-primary;
+      font-weight: bold;
+
+      @include media-breakpoint-up('lg') {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+
+    & > section {
+      display: grid;
+      grid-template-columns: 1fr;
+      border-bottom: 1px solid $brand-tertiary;
+      padding-bottom: 40px;
+      row-gap: 24px;
+
+      header {
+        h1 {
+          font-size: 25px;
+          text-transform: uppercase;
+          font-weight: bold;
+          border-bottom: 1px solid $brand-tertiary;
+          padding-bottom: 40px;
+          margin: 0;
+        }
+      }
+
+      .billing-order-summary-header {
+        h1:first-child {
+          border-bottom: 0;
+        }
+      }
+
+      .addresses-container,
+      .methods-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 24px;
+        width: 100%;
+        align-items: start;
+        justify-items: start;
+
+        header {
+          h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .shipping-address-details,
+      .billing-address-details,
+      .espress-delivery-details,
+      .packaging-details {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 6px;
+        align-items: center;
+        justify-items: start;
+
+        span {
+          font-family: 'Roboto', sans-serif;
+          font-size: 16px;
+        }
+
+        a {
+          font-size: 18px;
+          text-decoration: underline;
+        }
+      }
+
+      .payment-order-methods {
+        fieldset {
+          display: grid;
+          grid-template-columns: 1fr;
+          align-items: center;
+          justify-items: center;
+          row-gap: 10px;
+
+          @include media-breakpoint-up('lg') {
+            justify-items: start;
+          }
+        }
+
+        label {
+          font-weight: bold;
+          font-size: 19px;
+        }
+
+        .input,
+        select {
+          height: 34px;
+          background-color: $white;
+          border: 1px solid $brand-primary;
+          width: 200px;
+
+          @include media-breakpoint-up('lg') {
+            width: fit-content;
+          }
+
+          &::placeholder {
+            font-family: 'Roboto', sans-serif;
+            color: $brand-primary;
+            font-size: 14px;
+            font-weight: 300;
+          }
+
+          &:focus {
+            outline: double $brand-primary;
+          }
+        }
+
+        .select-month,
+        .select-year {
+          font-family: 'Roboto', sans-serif;
+          color: $brand-primary;
+          font-size: 14px;
+          font-weight: 300;
+        }
+
+        input[type='radio'],
+        input[type='checkbox'] {
+          filter: grayscale(100%) brightness(100%);
+        }
+
+        .card-info {
+          display: grid;
+          justify-items: center;
+          row-gap: 10px;
+          align-items: center;
+
+          @include media-breakpoint-up('lg') {
+            justify-items: start;
+          }
+        }
+
+        .card-info-container {
+          display: grid;
+          width: fit-content;
+          grid-template-columns: 1fr;
+          row-gap: 10px;
+
+          @include media-breakpoint-up('lg') {
+            grid-auto-flow: column;
+          }
+        }
+
+        .pay-methods {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          justify-items: center;
+          align-items: center;
+          width: fit-content;
+          column-gap: 8px;
+        }
+
+        .secure-pay {
+          display: grid;
+          grid-template-columns: 0.1fr 1fr;
+          align-items: center;
+          justify-items: start;
+          width: fit-content;
+
+          label {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+
+            @include media-breakpoint-up('lg') {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .order-place {
+          justify-self: center;
+
+          @include media-breakpoint-up('lg') {
+            justify-self: end;
+          }
+        }
+      }
+    }
+  }
+}

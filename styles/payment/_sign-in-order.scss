@@ -1,0 +1,161 @@
+.sign-in-order {
+  display: grid;
+  grid-row-gap: 24px;
+  row-gap: 24px;
+  align-items: center;
+
+  &-header {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 32px;
+      color: $brand-primary;
+      font-weight: bold;
+
+      @include media-breakpoint-up('lg') {
+        font-size: 36px;
+      }
+    }
+  }
+
+  .account {
+    border-bottom: 1px solid $brand-tertiary;
+
+    .account-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+      justify-items: center;
+      align-items: center;
+
+      @include media-breakpoint-up('lg') {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
+    .sign-in {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+      row-gap: 24px;
+      width: 100%;
+      border-bottom: 1px solid $brand-tertiary;
+
+      @include media-breakpoint-up('lg') {
+        border-right: 1px solid $brand-tertiary;
+        border-bottom: 0;
+      }
+
+      &-header {
+        width: 100%;
+        text-align: center;
+
+        h1 {
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+          border-bottom: 1px solid $brand-tertiary;
+
+          @include media-breakpoint-up('lg') {
+            font-size: 24px;
+          }
+        }
+      }
+
+      p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 34px;
+        text-align: center;
+        width: 100%;
+      }
+
+      a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        text-transform: lowercase;
+        text-decoration: underline;
+      }
+    }
+
+    .register {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+      row-gap: 24px;
+      width: 100%;
+
+      &-header {
+        width: 100%;
+        text-align: center;
+
+        h1 {
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+          border-bottom: 1px solid $brand-tertiary;
+
+          @include media-breakpoint-up('lg') {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    fieldset {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      row-gap: 24px;
+
+      .terms {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+        justify-items: center;
+
+        label {
+          font-family: 'Roboto', sans-serif;
+          font-size: 15px;
+          text-transform: lowercase;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    & .input {
+      height: 34px;
+      background-color: $white;
+      border: 1px solid $brand-primary;
+
+      @include media-breakpoint-up('md') {
+        width: 200px;
+      }
+
+      &::placeholder {
+        font-family: 'Roboto', sans-serif;
+        color: $brand-primary;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      &:focus {
+        outline: double $brand-primary;
+      }
+    }
+
+    input[type='checkbox'],
+    input[type='radio'] {
+      filter: grayscale(100%) brightness(100%);
+    }
+  }
+}

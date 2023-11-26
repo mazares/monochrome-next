@@ -1,0 +1,99 @@
+.confirm-order {
+  display: grid;
+  grid-row-gap: 24px;
+  row-gap: 24px;
+  align-items: center;
+
+  &-header {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 32px;
+      color: $brand-primary;
+      font-weight: bold;
+
+      @include media-breakpoint-up('lg') {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &-details {
+    display: grid;
+    grid-row-gap: 24px;
+    row-gap: 24px;
+    align-items: center;
+
+    &-header {
+      h1 {
+        font-size: 32px;
+        color: $brand-primary;
+        font-weight: bold;
+      }
+
+      p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 34px;
+
+        @include media-breakpoint-up('lg') {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .order-products-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: start;
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    a {
+      font-size: 18px;
+      text-transform: lowercase;
+      text-decoration: underline;
+    }
+
+    div:nth-last-of-type(1) {
+      justify-self: end;
+    }
+  }
+
+  .payment-shipping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    justify-items: start;
+    column-gap: 24px;
+
+    .confirm-payment,
+    .confirm-shipping {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-items: start;
+      row-gap: 24px;
+
+      &-header {
+        h1 {
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.button {
+  padding: 14px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: lowercase;
+  text-align: center;
+  border: 1px solid $brand-primary;
+  background-color: $transparent;
+  cursor: pointer;
+  width: auto;
+  white-space: nowrap;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &-small {
+    padding: 6px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid $brand-primary;
+    background-color: $transparent;
+  }
+
+  &:hover {
+    background-color: $brand-primary;
+    color: $white;
+  }
+}

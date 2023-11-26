@@ -1,0 +1,188 @@
+.style-form {
+  &-header {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    @include media-breakpoint-up('lg') {
+      justify-items: start;
+    }
+
+    & h1 {
+      font-size: 32px;
+      color: $brand-primary;
+      font-weight: bold;
+
+      @include media-breakpoint-up('lg') {
+        font-size: 36px;
+      }
+    }
+
+    & p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      color: $brand-primary;
+      font-weight: 300;
+      line-height: 34px;
+      text-align: center;
+      width: 100%;
+
+      @include media-breakpoint-up('lg') {
+        text-align: left;
+        font-size: 18px;
+        width: 70%;
+      }
+    }
+  }
+
+  & form {
+    fieldset {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      width: 100%;
+
+      & > div {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        justify-items: start;
+        align-items: center;
+      }
+
+      input,
+      select {
+        display: block;
+      }
+
+      .label {
+        display: block;
+        font-weight: 500;
+        font-size: 24px;
+
+        @include media-breakpoint-up('lg') {
+          font-weight: bold;
+          font-size: 30px;
+        }
+      }
+
+      .input-container {
+        display: grid;
+        grid-auto-flow: column;
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 10px;
+        width: fit-content;
+      }
+
+      & .input {
+        height: 34px;
+        width: 100%;
+        background-color: $white;
+        border: 1px solid $brand-primary;
+
+        @include media-breakpoint-up('md') {
+          width: 200px;
+        }
+      }
+
+      & .input:focus {
+        outline: double $brand-primary;
+      }
+
+      & input[type='checkbox'],
+      input[type='radio'] {
+        filter: grayscale(100%) brightness(100%);
+      }
+
+      & .input::placeholder {
+        font-family: 'Roboto', sans-serif;
+        color: $brand-primary;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 300;
+        color: $brand-tertiary;
+      }
+
+      .details {
+        width: 100%;
+        background-color: $white;
+        border: 1px solid $brand-primary;
+
+        &:focus {
+          outline: double $brand-primary;
+        }
+
+        &::placeholder {
+          font-family: 'Roboto', sans-serif;
+          color: $brand-tertiary;
+          font-size: 14px;
+          font-style: italic;
+          font-weight: 300;
+        }
+
+        @include media-breakpoint-up('md') {
+          width: 400px;
+        }
+      }
+
+      .watch-model {
+        text-align: center;
+        width: 100%;
+        height: 34px;
+        background-color: $white;
+        border: 1px solid $brand-primary;
+        font-family: 'Roboto', sans-serif;
+        color: $brand-primary;
+        font-size: 14px;
+        font-weight: 300;
+
+        @include media-breakpoint-up('md') {
+          width: 200px;
+        }
+
+        &:focus {
+          outline: double $brand-primary;
+        }
+
+        &::placeholder {
+          font-family: 'Roboto', sans-serif;
+          color: $brand-primary;
+          font-size: 12px;
+          font-style: italic;
+          font-weight: 300;
+        }
+
+        option {
+          text-align: center;
+        }
+      }
+
+      .image-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        max-height: fit-content;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .terms-conditions {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+        justify-items: start;
+        align-items: center;
+      }
+
+      .terms-conditions,
+      .button {
+        align-self: center;
+        justify-self: center;
+      }
+    }
+  }
+}

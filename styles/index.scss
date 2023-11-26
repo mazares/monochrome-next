@@ -1,0 +1,59 @@
+@import './fonts';
+@import './variables';
+
+// fontawesome
+@import './../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import './../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import './../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import './../node_modules/@fortawesome/fontawesome-free/scss/solid';
+
+// bootstrap
+@import './../node_modules/bootstrap/scss/bootstrap-reboot';
+@import './../node_modules/bootstrap/scss/bootstrap-grid';
+@import './../node_modules/bootstrap/scss/bootstrap-utilities';
+
+// shared
+@import './shared/index';
+
+// homepage
+@import './homepage/index';
+
+// catalog
+@import './catalog/index';
+
+// shopping-bag
+@import './shopping-bag/index';
+
+// payment
+@import './payment/index';
+
+// style
+@import './style/index';
+
+// reset
+@import './reset';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair', serif;
+  color: $brand-primary;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+}

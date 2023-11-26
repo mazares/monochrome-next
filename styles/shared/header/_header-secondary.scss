@@ -1,0 +1,115 @@
+.header-secondary {
+  background-color: $white;
+  padding: 16px 0;
+
+  @include media-breakpoint-up('lg') {
+    background: url('/images/banner.png') no-repeat center center / cover;
+    padding-bottom: 450px;
+  }
+
+  &-inner {
+    @include media-breakpoint-up('lg') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .header-connect {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 30px) 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 10px;
+        color: $white;
+      }
+
+      li:last-child {
+        text-transform: uppercase;
+      }
+
+      a {
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: $brand-tertiary;
+        }
+      }
+    }
+
+    .header-search {
+      position: relative;
+
+      & input[type='text'] {
+        height: 40px;
+        width: 254px;
+        background-color: $white;
+        border: 1px solid $brand-tertiary;
+        padding-left: 35px;
+      }
+
+      & input[type='text']:focus {
+        outline: double $brand-secondary;
+      }
+
+      & input[type='text']::placeholder {
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        color: $brand-primary;
+        font-style: italic;
+        font-weight: 300;
+        color: $brand-tertiary;
+      }
+
+      & button[type='submit'] {
+        cursor: pointer;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        background-color: $transparent;
+        border: none;
+        font-size: 22px;
+      }
+    }
+
+    .header-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-content: center;
+
+      @include media-breakpoint-up('lg') {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        align-content: center;
+        justify-content: center;
+        column-gap: 10px;
+      }
+
+      .header-title {
+        font-size: 19px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      .user-controls {
+        display: grid;
+        grid-template-columns: repeat(3, 0.25fr);
+        align-content: center;
+        justify-self: flex-end;
+        column-gap: 24px;
+
+        @include media-breakpoint-up('lg') {
+          grid-template-columns: repeat(3, 30px);
+          align-content: center;
+          justify-content: center;
+          gap: 10px;
+        }
+      }
+    }
+
+    i[class*='fa-'] {
+      font-size: 22px;
+    }
+  }
+}

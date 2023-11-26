@@ -1,0 +1,221 @@
+.footer {
+  background: linear-gradient(
+    to bottom,
+    $brand-secondary 55%,
+    $brand-primary 45%
+  );
+
+  @include media-breakpoint-up('lg') {
+    background: $brand-secondary;
+  }
+
+  &-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include media-breakpoint-up('lg') {
+      display: grid;
+      grid-template-columns: 0.75fr 0.25fr;
+    }
+  }
+
+  h1 {
+    font-family: 'Playfair', serif;
+    font-size: 26px;
+    margin: 0;
+  }
+
+  &-connect {
+    &-inner {
+      font-family: 'Roboto', sans-serif;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+
+      @include media-breakpoint-up('lg') {
+        justify-items: start;
+      }
+    }
+  }
+
+  &-newsletter {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+
+    @include media-breakpoint-up('lg') {
+      justify-content: start;
+      justify-items: start;
+    }
+
+    &-header {
+      text-align: center;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    & input[type='email'] {
+      height: 34px;
+      width: 228px;
+      background-color: $white;
+      border: 1px solid $brand-tertiary;
+    }
+
+    & input[type='email']:focus {
+      outline: double $brand-tertiary;
+    }
+
+    & input[type='checkbox'] {
+      filter: grayscale(100%) brightness(100%);
+    }
+
+    & input[type='email']::placeholder {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 300;
+      color: $brand-tertiary;
+    }
+
+    .newsletter {
+      display: grid;
+      justify-items: center;
+      row-gap: 10px;
+
+      @include media-breakpoint-up('lg') {
+        justify-items: start;
+      }
+    }
+
+    .terms {
+      display: grid;
+      grid-template-columns: 0.1fr 1fr;
+      justify-items: start;
+      align-items: center;
+      font-size: 12px;
+    }
+  }
+
+  &-social {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    row-gap: 30px;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 20px;
+
+      li {
+        font-size: 22px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  &-nav {
+    color: $white;
+
+    @include media-breakpoint-up('lg') {
+      background-color: $brand-secondary;
+      color: $brand-primary;
+      order: -1;
+    }
+
+    &-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 2fr 0.5fr;
+      grid-auto-flow: column;
+      row-gap: 45px;
+      align-items: center;
+      justify-items: center;
+      font-family: 'Roboto', sans-serif;
+
+      @include media-breakpoint-up('lg') {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-auto-flow: column;
+        grid-template-rows: 1fr;
+        justify-items: start;
+        align-items: start;
+      }
+
+      .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-transform: lowercase;
+        font-size: 14px;
+        text-align: center;
+
+        @include media-breakpoint-up('lg') {
+          text-align: left;
+          font-size: 16px;
+          width: 100%;
+        }
+
+        & nav:first-child {
+          border-right: 1px solid white;
+          padding-right: 15px;
+
+          @include media-breakpoint-up('lg') {
+            border: none;
+            padding: 0;
+          }
+        }
+
+        & nav:last-child {
+          padding-left: 15px;
+          @include media-breakpoint-up('lg') {
+            padding: 0;
+            order: -1;
+          }
+        }
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        justify-items: center;
+
+        @include media-breakpoint-up('lg') {
+          justify-items: start;
+        }
+      }
+
+      li {
+        text-align: center;
+        width: 100%;
+
+        @include media-breakpoint-up('lg') {
+          text-align: left;
+        }
+      }
+
+      .terms {
+        text-decoration: underline;
+        font-weight: 300;
+        font-size: 14px;
+        font-style: italic;
+        width: 100%;
+      }
+
+      &-contact {
+        @include media-breakpoint-up('lg') {
+          order: -1;
+        }
+      }
+    }
+  }
+}

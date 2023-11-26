@@ -1,0 +1,115 @@
+.product-bag {
+  border-bottom: 1px solid $brand-tertiary;
+
+  .product-bag-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 24px;
+
+    @include media-breakpoint-up('lg') {
+      grid-template-columns: repeat(5, 1fr);
+      justify-items: center;
+    }
+
+    .product-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .product-description {
+      display: grid;
+      row-gap: 24px;
+      text-align: center;
+
+      span {
+        font-weight: bold;
+        font-size: 14px;
+
+        @include media-breakpoint-up('lg') {
+          font-size: 18px;
+        }
+      }
+
+      p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+      }
+    }
+
+    .product-color {
+      .color {
+        font-size: 14px;
+        font-weight: bold;
+
+        @include media-breakpoint-up('lg') {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .product-qty {
+      align-self: center;
+      justify-self: center;
+
+      form {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-items: center;
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        input[type='number'] {
+          font-size: 12px;
+          text-align: center;
+          font-family: 'Roboto', sans-serif;
+          border-radius: 0;
+          padding: 2px 0;
+          border: 1px solid $brand-primary;
+          -moz-appearance: textfield;
+
+          @include media-breakpoint-up('lg') {
+            padding: 3px 0;
+            font-size: 16px;
+          }
+        }
+
+        input[type='number']:focus {
+          outline: none;
+        }
+
+        .button-small {
+          padding: 2px;
+
+          @include media-breakpoint-up('lg') {
+            padding: 6px 15px;
+          }
+        }
+      }
+    }
+
+    .product-price {
+      span {
+        font-weight: bold;
+        font-size: 16px;
+
+        @include media-breakpoint-up('lg') {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .product-controls {
+      border-top: 1px solid $brand-tertiary;
+      grid-column: 1 / span 5;
+      justify-self: end;
+    }
+  }
+}

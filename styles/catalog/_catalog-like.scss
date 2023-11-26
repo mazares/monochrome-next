@@ -1,0 +1,47 @@
+.catalog-like {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  row-gap: 32px;
+
+  &-header {
+    border-top: 1px solid $brand-tertiary;
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      padding: 15px 0;
+      margin: 0;
+      font-size: 24px;
+
+      @include media-breakpoint-up('lg') {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .product-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+    row-gap: 50px;
+    width: 100%;
+
+    .product-tile {
+      &:nth-child(even) {
+        justify-self: end;
+      }
+
+      &:nth-child(odd) {
+        justify-self: start;
+      }
+    }
+
+    @include media-breakpoint-up('lg') {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 24px;
+    }
+  }
+}

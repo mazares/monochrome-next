@@ -1,0 +1,19 @@
+.dark-button {
+  padding: 14px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $brand-primary;
+  color: $white;
+  border: $brand-primary;
+  letter-spacing: 0.7px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $white;
+    border: $brand-primary;
+    color: $brand-primary;
+  }
+}

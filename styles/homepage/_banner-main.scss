@@ -1,0 +1,11 @@
+.banner-main {
+  background: url('/images/banner-main.png') no-repeat center center / cover;
+  position: relative;
+  height: 350px;
+
+  .banner-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+}
